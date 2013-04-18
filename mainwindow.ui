@@ -30,9 +30,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>20</y>
-      <width>151</width>
-      <height>582</height>
+      <y>-1</y>
+      <width>147</width>
+      <height>592</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -43,17 +43,33 @@
       <number>1</number>
      </property>
      <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>22</width>
+         <height>23</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
       <widget class="QPushButton" name="networkButton">
        <property name="minimumSize">
         <size>
          <width>145</width>
-         <height>110</height>
+         <height>100</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>145</width>
-         <height>90</height>
+         <height>100</height>
         </size>
        </property>
        <property name="text">
@@ -66,13 +82,13 @@
        <property name="minimumSize">
         <size>
          <width>145</width>
-         <height>110</height>
+         <height>100</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>145</width>
-         <height>90</height>
+         <height>100</height>
         </size>
        </property>
        <property name="text">
@@ -85,13 +101,13 @@
        <property name="minimumSize">
         <size>
          <width>145</width>
-         <height>110</height>
+         <height>100</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>145</width>
-         <height>90</height>
+         <height>100</height>
         </size>
        </property>
        <property name="text">
@@ -100,17 +116,17 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="fackapButton">
+      <widget class="QPushButton" name="fakeapButton">
        <property name="minimumSize">
         <size>
          <width>145</width>
-         <height>110</height>
+         <height>100</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>145</width>
-         <height>90</height>
+         <height>100</height>
         </size>
        </property>
        <property name="text">
@@ -123,13 +139,13 @@
        <property name="minimumSize">
         <size>
          <width>145</width>
-         <height>110</height>
+         <height>100</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>145</width>
-         <height>90</height>
+         <height>100</height>
         </size>
        </property>
        <property name="text">
@@ -138,19 +154,6 @@
       </widget>
      </item>
     </layout>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>580</y>
-      <width>54</width>
-      <height>12</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
    </widget>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
@@ -161,10 +164,7 @@
       <height>541</height>
      </rect>
     </property>
-    <widget class="QWidget" name="page">
-     <zorder>label</zorder>
-     <zorder>label</zorder>
-    </widget>
+    <widget class="QWidget" name="page"/>
     <widget class="QWidget" name="page_2"/>
    </widget>
    <widget class="QWidget" name="horizontalLayoutWidget">
@@ -173,7 +173,7 @@
       <x>-1</x>
       <y>0</y>
       <width>801</width>
-      <height>31</height>
+      <height>24</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="TitleBar">
@@ -181,16 +181,40 @@
       <number>2</number>
      </property>
      <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>TextLabel</string>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
-      </widget>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>15</width>
+         <height>5</height>
+        </size>
+       </property>
+      </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="Titlebar">
+       <property name="minimumSize">
+        <size>
+         <width>141</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>141</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/res/image/title.png);</string>
+       </property>
        <property name="text">
-        <string>TextLabel</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -199,91 +223,107 @@
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>60</width>
+         <width>200</width>
          <height>20</height>
         </size>
        </property>
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="setButton">
        <property name="minimumSize">
         <size>
-         <width>30</width>
-         <height>28</height>
+         <width>29</width>
+         <height>18</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>30</width>
-         <height>28</height>
+         <width>29</width>
+         <height>18</height>
         </size>
        </property>
        <property name="text">
-        <string>PushButton</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="minButton">
        <property name="minimumSize">
         <size>
-         <width>30</width>
-         <height>28</height>
+         <width>29</width>
+         <height>18</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>30</width>
-         <height>28</height>
+         <width>29</width>
+         <height>18</height>
         </size>
        </property>
        <property name="text">
-        <string>PushButton</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="maxButton">
        <property name="minimumSize">
         <size>
-         <width>30</width>
-         <height>28</height>
+         <width>29</width>
+         <height>18</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>30</width>
-         <height>28</height>
+         <width>29</width>
+         <height>18</height>
         </size>
        </property>
        <property name="text">
-        <string>PushButton</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="closeButton">
        <property name="minimumSize">
         <size>
-         <width>30</width>
-         <height>28</height>
+         <width>29</width>
+         <height>18</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>30</width>
-         <height>28</height>
+         <width>29</width>
+         <height>18</height>
         </size>
        </property>
        <property name="text">
-        <string>PushButton</string>
+        <string/>
        </property>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="label_CheckLogin">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>572</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
  </widget>
