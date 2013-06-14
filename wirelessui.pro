@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT      += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,11 +14,20 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    connect.cpp \
+    aplist.cpp \
+    arp.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    connect.h \
+    aplist.h \
+    arp.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    Connect.ui \
+    aplist.ui \
+    arp.ui
 
 RESOURCES += \
     res.qrc

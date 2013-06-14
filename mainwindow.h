@@ -5,6 +5,9 @@
 #include <QtGui>
 #include <QtCore>
 #include <QtWidgets>
+#include "connect.h"
+#include "aplist.h"
+#include "arp.h"
 
 namespace Ui {
 class MainWindow;
@@ -15,6 +18,13 @@ class MainWindow : public QMainWindow
     Q_OBJECT
     
 public:
+
+    QLabel *fakeap;
+    QLabel *anticrack;
+    aplist list;
+    Connect network;
+    arp arp_tab;
+
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 protected:
@@ -22,7 +32,7 @@ protected:
     void mouseMoveEvent(QMouseEvent *);
     void mousePressEvent(QMouseEvent *);
 private slots:
-
+    void connecting();
     void on_setButton_clicked();
 
     void on_networkButton_clicked();
@@ -40,13 +50,13 @@ private:
     Ui::MainWindow *ui;
 
     QPixmap m_pixmapBg;
-    QAction *m_AactionAboutQt;
+    QAction *m_Aactionsetting;
     QMenu *m_menu;
-
     QPoint m_pointStart;
     QPoint m_pointPress;
+    QVector <QPushButton *> m_vecBtn;
+    QVector <QAction *>  m_actbtn;
 
-    QVector <QPushButton* > m_vecBtn;
 
     ///成员变量初始化;
     void initData();
@@ -55,7 +65,11 @@ private:
     void setNomalStyle();
 
     ///功能选择函数;
+    //void setCurrentIndex();
     void setCurrentWidget();
+    void setNetworkWidget();
+    void setCurrentWidgetact();
+    void setwidget();
 };
 
 #endif // MAINWINDOW_H
